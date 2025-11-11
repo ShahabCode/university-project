@@ -3,38 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/dark.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Home</title>
-    <style>
-        body {
-            text-align: center;
-            margin: 50px;
-        }
-        h1 {
-            margin-bottom: 20px;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        li {
-            margin: 10px 0;
-        }
-    </style>
 </head>
 <body class="dark">
+    <nav>
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/pages/aboutUs.html">About Us</a></li>
+            <li><a href="/pages/callUs.html">Contact Us</a></li>
+            <li><a href="/pages/myTeam.html">Our Team</a></li>
+            <li><a href="/auth/login.html">Login</a></li>
+            <li><a href="/auth/register.html">Register</a></li>
+        </ul>
+    </nav>
 
-    <h1>Welcome to Our Website</h1>
-    <p>Select a page to continue:</p>
+    <section class="hero">
+        <h1>خدمات امنیت سایبری و تست نفوذ وب</h1>
+        <p>ما به کسب‌وکارها کمک می‌کنیم تا با شناسایی آسیب‌پذیری‌ها، امنیت زیرساخت خود را تقویت کنند.</p>
+        <a href="/pages/services.html" class="btn">مشاهده خدمات</a>
+    </section>
 
-    <ul>
-        <li><a href="pages/aboutUs.html">About Us</a></li>
-        <li><a href="pages/callUs.html">Contact Us</a></li>
-        <li><a href="pages/login.html">Login</a></li>
-        <li><a href="pages/register.html">Register</a></li>
-        <li><a href="pages/myTeam.html">Our Team</a></li>
-    </ul>
+    <!-- خدمات -->
+    <section class="services">
+        <div class="service-card">
+            <h3>تست نفوذ وب</h3>
+            <p>بررسی و شناسایی ضعف‌های امنیتی وب‌سایت پیش از سوءاستفاده مهاجمان.</p>
+        </div>
+        <div class="service-card">
+            <h3>ارزیابی امنیت شبکه</h3>
+            <p>تحلیل کامل ساختار شبکه و شناسایی نقاط ضعف احتمالی در لایه‌های امنیتی.</p>
+        </div>
+        <div class="service-card">
+            <h3>اسکن آسیب‌پذیری</h3>
+            <p>شناسایی خودکار و دستی تهدیدات امنیتی در سامانه‌های وب و شبکه.</p>
+        </div>
+    </section>
 
+    <!-- چرا ما -->
+    <section class="why-us">
+        <h2>چرا ما؟</h2>
+        
+        <p>تیم متخصص و دارای گواهینامه‌های بین‌المللی</p>
+        <p>گزارش‌های دقیق و قابل‌درک</p>
+        <p>رعایت محرمانگی و اصول اخلاقی در تمام مراحل</p>
+        
+    </section>
+
+    <!-- فوتر -->
+    <footer>
+        © 2025 Epic Hunter — تمامی حقوق محفوظ است.
+    </footer>
+    
 </body>
 </html>
