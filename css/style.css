@@ -1,58 +1,160 @@
-body{
-    background-color: var(--md-sys-color-background);
-    color: var(--md-sys-color-on-background);
-    direction: rtl;
-    font-family: 'Vazirmatn', sans-serif;
-    
+/* Import Vazir font */
+@import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css');
+@import url('./light-hc.css');
+
+/* ========== GLOBAL RESET ========== */
+* {
+  box-sizing: border-box;
+  font-family: 'Vazir', sans-serif;
 }
 
-.form-container{
-  background-color: var(--md-sys-color-on-background);
-  color: var(--md-sys-color-surface);
-  padding: 20px;
-  width: 320px;
-  border-radius: 14px;
-  box-shadow: 0 0 10px black;
-  text-align: center;
-}
-
-.form-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-
-input{
-  width: 100%;
-  border-radius: 3px;
-  border: 1px solid var(--md-sys-color-background);
-}
-
-label{
-  display: block;
-}
-
-button {
-  background-color: var(--md-sys-color-on-primary);
+body {
+  background-color: var(--md-sys-color-background);
   color: var(--md-sys-color-on-background);
-  border: none;
-  padding: 5px 10px;
-  border-radius: 8px;
-  width: 100%;
-  margin-top: 20px;
+  line-height: 1.7;
+  font-size: 1rem;
+  text-align: center;
+  direction: rtl;
+}
+
+.aboutUs{
+    width: 750px;
+    display: inline-block;
+    margin-top: 35px;
+
+}
+
+/* ========== TYPOGRAPHY ========== */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--md-sys-color-primary);
+  font-weight: 700;
+}
+
+h3{
+  margin-top: 35px;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+#myTeamP{
+  width: 650px;
+  display: inline-block;
 }
 
 a {
-  color: var(--md-sys-color-on-primary);
+  color: var(--md-sys-color-primary);
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
-footer {
-  background-color: var(--md-sys-color-surface-container-high);
-  color: var(--md-sys-color-on-surface);
-  border-top: 1px solid var(--md-sys-color-outline-variant);
-  border-radius: 10px;
+a:hover {
+  box-shadow: 0 0 0 1px var(--md-sys-color-shadow); 
 }
+
+/* ========== NAVBAR ========== */
+nav {
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  padding: 1rem 2rem;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15px;
+  margin-top: 0;
+}
+
+nav > ul > li {
+    list-style-type: none;
+    display: inline;
+}
+
+nav a {
+    color: var(--md-sys-color-on-primary);
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--md-sys-color-inverse-primary);
+}
+
+/* ========== BUTTONS ========== */
+button, .btn {
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  margin: 10px;
+  transition: background 0.3s ease, transform 0.1s ease;
+}
+
+button:hover, .btn:hover {
+  background-color: var(--md-sys-color-primary-container);
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+/* Secondary button */
+.btn-secondary {
+  background-color: var(--md-sys-color-secondary);
+  color: var(--md-sys-color-on-secondary);
+}
+
+/* ========== CARDS ========== */
+.form-container {
+  background-color: var(--md-sys-color-surface-container);
+  color: var(--md-sys-color-on-surface);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 5px;
+  margin-top: 50px;
+  box-shadow: 0 1px 1px var(--md-sys-color-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 550px;
+  text-align: center;
+  display: inline-block;
+}
+
+
+.form-container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 2px 5px var(--md-sys-color-shadow);
+}
+
+/* ========== FORMS ========== */
+input, textarea, select {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--md-sys-color-outline);
+  border-radius: 6px;
+  background-color: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--md-sys-color-primary);
+  box-shadow: 0 0 0 1px var(--md-sys-color-outline);
+}
+
+/* ========== FOOTER ========== */
+footer {
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-secondary);
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  margin-top: 65px;
+  border-radius: 25px;
+  height: 72px;
+}
+
 
