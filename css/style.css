@@ -20,8 +20,6 @@ body {
 .aboutUs{
     width: 750px;
     display: inline-block;
-    margin-top: 35px;
-
 }
 
 /* ========== TYPOGRAPHY ========== */
@@ -53,16 +51,33 @@ a:hover {
   box-shadow: 0 0 0 1px var(--md-sys-color-shadow); 
 }
 
-/* ========== NAVBAR ========== */
-nav {
-  background-color: var(--md-sys-color-primary);
-  color: var(--md-sys-color-on-primary);
-  padding: 1rem 2rem;
+/* ========== header ========== */
+
+header {
+  display: flex;
+  direction: ltr;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--md-sys-color-primary);
+  height: 78px;
+  color: var(--md-sys-color-on-primary);
   border-radius: 15px;
   margin-top: 0;
-  height: 78px;
+  margin-bottom: 40px;
+}
+
+.logo img {
+  height: 60px;       
+  width: auto;        
+  object-fit: contain;
+  margin-right: 0.5rem;
+}
+
+/* ========== NAVBAR ========== */
+
+nav{
+  direction: rtl;
 }
 
 nav > ul > li {
@@ -79,9 +94,32 @@ nav a {
 
 nav a:hover {
   color: var(--md-sys-color-inverse-primary);
+  transform: scale(1.1); 
+  text-shadow: 0 2px 5px rgba(0,0,0,0.3); 
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  
+}
+
+#authLink a{
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  margin-left: 1rem;
+  padding: 0.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+#authLink a:hover {
+  opacity: 0.8;
 }
 
 /* ========== BUTTONS ========== */
+
 button, .btn {
   background-color: var(--md-sys-color-primary);
   color: var(--md-sys-color-on-primary);
@@ -147,15 +185,92 @@ input:focus, textarea:focus, select:focus {
 }
 
 /* ========== FOOTER ========== */
+
 footer {
   background-color: var(--md-sys-color-primary);
-  color: var(--md-sys-color-on-secondary);
-  text-align: center;
-  padding: 1.5rem;
-  font-size: 0.9rem;
-  margin-top: 65px;
+  color: var(--md-sys-color-on-primary);
+  padding: 2rem 3rem;
+  border-top: 3px solid var(--md-sys-color-inverse-primary);
   border-radius: 25px;
-  height: 72px;
+  height: 350px;
+  margin-top: 55px;
 }
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-logo {
+  height: 50px;
+  margin-bottom: 1rem;
+  margin-top: 40px;
+}
+
+.footer-section h3 {
+  color: var(--md-sys-color-inverse-primary);
+  margin-bottom: 0.8rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+  color: var(--md-sys-color-on-primary);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: var(--md-sys-color-inverse-primary);
+}
+
+.social-icons a {
+  color: var(--md-sys-color-on-primary);
+  margin-right: 10px;
+  font-size: 1.3rem;
+  transition: color 0.3s;
+}
+
+/* آیکون‌ها */
+.social-icons {
+  direction: ltr;
+  margin-top: 1rem;
+  display: flex;
+  gap: 15px;
+  justify-content: center; /* به چپ منظم می‌شوند */
+}
+
+.social-icons a {
+  color: var(--md-sys-color-on-primary);
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--md-sys-color-inverse-primary);
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
 
 
