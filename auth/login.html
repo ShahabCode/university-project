@@ -9,63 +9,58 @@
 </head>
  <body>
 
-   <nav>
-        <ul>
-            <li><a href="/index.html">خانه</a></li>
-            <li><a href="/pages/aboutUs.html">درباره ما</a></li>
-            <li><a href="/pages/callUs.html">تماس با ما</a></li>
-            <li><a href="/pages/myTeam.html">تیم ما</a></li>
-            <li><a href="/auth/login.html">ورود</a></li>
-            <li><a href="/auth/register.html">ثبت نام</a></li>
-        </ul>
-  </nav>
+  <div id="header"></div>
 
   <!-- کانتینر اصلی -->
-  <main id="main" class="login-page" aria-labelledby="login-heading">
-  <div class="form-wrapper">
-   <section class="form-container" role="region" aria-label="فرم ورود">
-    <h1 id="login-heading">ورود به حساب</h1>
+<main id="main" class="login-page" aria-labelledby="login-heading">
+    <div class="form-wrapper">
+    <section class="form-container" role="region" aria-label="فرم ورود">
+      <h1 id="login-heading">ورود به حساب</h1>
 
-      <!-- فرم ورود -->
-    <form action="#" method="post">
-    <!-- ایمیل یا نام کاربری -->
-    <div>
-      <label for="email">ایمیل یا نام کاربری:</label>
-      <input
-        type="text"
-        id="email"
-        name="email"
-        placeholder="you@example.com"
-        required
-      />
-    </div>
+        <!-- فرم ورود -->
+      <form action="#" method="post">
+      <!-- ایمیل یا نام کاربری -->
+      <div>
+        <label for="email">ایمیل یا نام کاربری:</label>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          placeholder="you@example.com"
+          required
+        />
+      </div>
 
-    <!-- رمز عبور -->
-    <div>
-      <label for="password">رمز عبور:</label>
-      <input
-        type="password"
-        id="password"
-        name="password"
-        placeholder="رمز عبور شما"
-        required
-      />
-    </div>
+      <!-- رمز عبور -->
+      <div>
+        <label for="password">رمز عبور:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="رمز عبور شما"
+          required
+        />
+      </div>
 
-    <!-- دکمه ورود -->
-    <div>
-      <button type="submit">ورود</button>
-    </div>
+      <!-- دکمه ورود -->
+      <div>
+        <button type="submit">ورود</button>
+      </div>
 
-    <!-- لینک‌ها -->
-    <div>
-      <a href="forgot-pass.html">رمز را فراموش کرده‌اید؟</a> |
-      <a href="register.html">ثبت نام</a>
-    </div>
-  </form>
-</section>
-</div>
-  </main>
+      <!-- لینک‌ها -->
+      <div>
+        <a href="forgot-pass.html">رمز را فراموش کرده‌اید؟</a> |
+        <a href="register.html">ثبت نام</a>
+      </div>
+    </form>
+   </section>
+  </div>
+</main>
+
+<div id="footer"></div>
+
+<script src="/js/loadComponents.js"></script>
 
 </body>
 </html>
