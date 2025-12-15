@@ -1,9 +1,7 @@
 /* Import Vazir font */
 @import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css');
 @import url('./light-hc.css');
-@import "./components/button.css";
-@import "./components/card.css";
-
+@import url('components/components.css');
 
 /* ========== */
 
@@ -26,9 +24,51 @@ body {
   direction: rtl;
 }
 
-.aboutUs{
-    width: 750px;
-    display: inline-block;
+
+/* ========== About Us ========== */
+
+.aboutUs {
+    background-color: var(--md-sys-color-surface-container);
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    box-shadow:
+        0px 2px 4px rgba(var(--md-sys-color-shadow-rgb,0,0,0),0.12),
+        0px 4px 8px rgba(var(--md-sys-color-shadow-rgb,0,0,0),0.08);
+}
+
+/* تیترها */
+.aboutUs h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: var(--md-sys-color-primary);
+    text-align: center;
+}
+
+.aboutUs h2 {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--md-sys-color-primary-container);
+}
+
+/* متن‌ها */
+.aboutUs p {
+    font-size: 1.1rem;
+    color: var(--md-sys-color-on-surface-variant);
+    margin-bottom: 1rem;
+}
+
+/* لیست خدمات */
+.aboutUs ul {
+    list-style: disc inside;
+    margin-left: 0;
+    margin-bottom: 1rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.aboutUs ul li {
+    margin-bottom: 0.6rem;
+    font-size: 1.1rem;
 }
 
 /* ========== TYPOGRAPHY ========== */
@@ -43,11 +83,6 @@ h3{
 
 p {
   margin-bottom: 1rem;
-}
-
-#myTeamP{
-  width: 650px;
-  display: inline-block;
 }
 
 a {
@@ -233,5 +268,128 @@ footer {
   opacity: 0.8;
 }
 
+/*================= hero ===================*/
+
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background-color: var(--md-sys-color-surface-container-high);
+    border-radius: 16px;
+    margin-bottom: 3rem;
+    box-shadow:
+        0px 4px 8px rgba(var(--md-sys-color-shadow-rgb,0,0,0),0.12),
+        0px 8px 12px rgba(var(--md-sys-color-shadow-rgb,0,0,0),0.08);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: var(--md-sys-color-primary);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--md-sys-color-on-surface-variant);
+    margin-bottom: 2rem;
+}
+
+/* =================why us================= */
+
+.why-us {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: var(--md-sys-color-surface-container-low);
+    border-radius: 12px;
+    margin-top: 40px;
+}
+
+.why-us h2 {
+    font-size: 2rem;
+    color: var(--md-sys-color-primary);
+    margin-bottom: 1rem;
+}
+
+.why-us p {
+    font-size: 1.1rem;
+    color: var(--md-sys-color-on-surface-variant);
+    margin-bottom: 0.5rem;
+}
+
+/* ==========myTeam============ */
 
 
+.myTeam {
+    margin-bottom: 3rem;
+}
+
+.myTeam h1 {
+    font-size: 2.2rem;
+    text-align: center;
+    color: var(--md-sys-color-primary);
+    margin-bottom: 0.8rem;
+}
+
+.myTeam h2 {
+    font-size: 1.6rem;
+    text-align: center;
+    color: var(--md-sys-color-primary-container);
+    margin-bottom: 1.5rem;
+}
+
+/* لیست اعضای تیم */
+.myTeam ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    padding: 0;
+}
+
+.myTeam ul li {
+    background-color: var(--md-sys-color-surface-container);
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow:
+        0px 2px 4px rgba(var(--md-sys-color-shadow-rgb,0,0,0),0.12),
+        0px 4px 8px rgba(var(--md-sys-color-shadow-rgb,0,0,0),0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.myTeam ul li:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0px 4px 8px rgba(var(--md-sys-color-shadow-rgb,0,0,0),0.14),
+        0px 8px 12px rgba(var(--md-sys-color-shadow-rgb,0,0,0),0.12);
+}
+
+/* عکس اعضای تیم */
+.myTeam ul li img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.8rem;
+    border: 2px solid var(--md-sys-color-primary-container);
+}
+
+/* متن توضیحات اعضای تیم */
+.myTeam ul li p {
+    font-size: 1rem;
+    color: var(--md-sys-color-on-surface-variant);
+    line-height: 1.4;
+}
+
+/* ماموریت و چشم‌انداز */
+#myTeam-mission {
+    background-color: var(--md-sys-color-surface-container-low);
+    padding: 1.8rem;
+    border-radius: 12px;
+    box-shadow:
+        0px 2px 4px rgba(var(--md-sys-color-shadow-rgb,0,0,0),0.12),
+        0px 4px 6px rgba(var(--md-sys-color-shadow-rgb,0,0,0),0.08);
+    color: var(--md-sys-color-on-surface-variant);
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
