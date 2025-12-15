@@ -1,0 +1,117 @@
+button, .btn {
+  /* Layout */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  /* Size (default = medium) */
+  height: 40px;
+  padding: 0 24px;
+
+  /* Shape */
+  border-radius: var(--md-sys-shape-corner-full);
+  border: none;
+
+  /* Typography */
+  font-size: 14px;
+  font-weight: 500;
+
+  /* Effects */
+  cursor: pointer;
+  margin: 10px;
+  text-decoration: none;
+
+  transition: background-color 0.2s, box-shadow 0.2s, opacity 0.2s;
+}
+
+.btn-filled {
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+}
+
+.btn-outlined {
+  background-color: transparent;
+  color: var(--md-sys-color-primary);
+  border: 1px solid var(--md-sys-color-outline);
+}
+
+.btn-tonal {
+  background-color: var(--md-sys-color-secondary-container);
+  color: var(--md-sys-color-on-secondary-container);
+}
+
+.btn-elevated {
+  background-color: var(--md-sys-color-surface-container-low);
+  color: var(--md-sys-color-primary);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.btn-text {
+  background-color: transparent;
+  color: var(--md-sys-color-primary);
+  padding: 0 12px;
+}
+
+/* x-small */
+.btn-xs {
+  height: 28px;
+  padding: 0 12px;
+  font-size: 11px;
+}
+
+/* small */
+.btn-sm {
+  height: 32px;
+  padding: 0 16px;
+  font-size: 12px;
+}
+
+/* medium (default) */
+.btn-md {
+  height: 40px;
+  padding: 0 24px;
+  font-size: 14px;
+}
+
+/* large */
+.btn-lg {
+  height: 48px;
+  padding: 0 28px;
+  font-size: 15px;
+}
+
+/* x-large */
+.btn-xl {
+  height: 56px;
+  padding: 0 32px;
+  font-size: 16px;
+}
+
+.btn .icon {
+  width: 20px;
+  height: 20px;
+}
+
+button:hover,
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* ----------------------------- */
+/* Press (morph shape)           */
+/* ----------------------------- */
+
+button:active, .btn:active {
+  border-radius: var(--md-sys-shape-corner-full);
+  transform: translateY(1px);
+}
+
+/* ----------------------------- */
+/* Secondary Button (Your old one) */
+/* ----------------------------- */
+
+.btn-secondary {
+  background-color: var(--md-sys-color-secondary);
+  color: var(--md-sys-color-on-secondary);
+}
