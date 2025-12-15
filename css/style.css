@@ -1,6 +1,9 @@
 /* Import Vazir font */
 @import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css');
 @import url('./light-hc.css');
+@import "./components/button.css";
+@import "./components/card.css";
+
 
 /* ========== */
 
@@ -124,135 +127,6 @@ nav a:hover {
   opacity: 0.8;
 }
 
-/* ========== BUTTONS ========== */
-
-/* ----------------------------- */
-/* Base Button                   */
-/* ----------------------------- */
-
-button, .btn {
-  /* Container */
-  background-color: var(--md-sys-color-primary);
-  height: 40px;
-  padding: 0 24px;
-  overflow: hidden;
-  
-  /* Label */
-  color: var(--md-sys-color-on-primary);
-
-  /* Shape */
-  border-radius: var(--md-sys-shape-corner-full);
-  border: none;
-
-  /* Layout */
-  display: inline-flex;
-  align-items: center;
-  gap: 8px; /* space between icon & label */
-
-  /* Effects */
-  box-shadow: 0 0 0 var(--md-sys-color-shadow);
-  
-  cursor: pointer;
-  margin: 10px;
-}
-
-/* Icon inside button */
-button .icon, .btn .icon {
-  width: 20px;
-  height: 20px;
-  color: var(--md-sys-color-on-primary);
-}
-
-/* ----------------------------- */
-/* Hover                         */
-/* ----------------------------- */
-
-button:hover,
-.btn:hover {
-  box-shadow: var(--md-sys-color-shadow);
-  color: var(--md-sys-color-on-primary);
-  opacity: 0.9;
-}
-
-button:hover .icon,
-.btn:hover .icon {
-  color: var(--md-sys-color-on-primary);
-}
-
-/* ------------------------------------------ */
-/* Hover — Toggle (Unselected)                */
-/* ------------------------------------------ */
-
-/* .btn-toggle:hover::before {
-  background-color: var(--md-sys-color-on-surface-variant);
-  opacity: var(--md-sys-state-hover-state-layer-opacity);
-}
-
-.btn-toggle:hover {
-  color: var(--md-sys-color-on-surface-variant);
-}
-
-.btn-toggle:hover .icon {
-  color: var(--md-sys-color-on-surface-variant); */
-/* } */
-
-/* ------------------------------------------ */
-/* Hover — Toggle (Selected)                  */
-/* ------------------------------------------ */
-
-/* .btn-toggle.selected:hover::before {
-  background-color: var(--md-sys-color-on-primary);
-  opacity: var(--md-sys-state-hover-state-layer-opacity);
-}
-
-.btn-toggle.selected:hover {
-  color: var(--md-sys-color-on-primary);
-}
-
-.btn-toggle.selected:hover .icon {
-  color: var(--md-sys-color-on-primary);
-} */
-
-
-/* ----------------------------- */
-/* Press (morph shape)           */
-/* ----------------------------- */
-
-button:active, .btn:active {
-  border-radius: var(--md-sys-shape-corner-full);
-  transform: translateY(1px);
-}
-
-/* ----------------------------- */
-/* Secondary Button (Your old one) */
-/* ----------------------------- */
-
-.btn-secondary {
-  background-color: var(--md-sys-color-secondary);
-  color: var(--md-sys-color-on-secondary);
-}
-
-/* ========== CARDS ========== */
-
-.form-container {
-  background-color: var(--md-sys-color-surface-container-low);
-  color: var(--md-sys-color-on-surface);
-  border-radius: 12px;
-  padding: 2rem;
-  margin: 5px;
-  margin-top: 50px;
-  box-shadow: 0 1px 1px var(--md-sys-color-shadow);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  width: 550px;
-  text-align: center;
-  display: inline-block;
-}
-
-
-.form-container:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 2px 5px var(--md-sys-color-shadow);
-}
 
 /* ========== FORMS ========== */
 input, textarea, select {
