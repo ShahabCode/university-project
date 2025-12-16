@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مدیریت خدمات</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+  <div id="header"></div>
+
+  <main class="container">
+    <h1>لیست خدمات امنیت سایبری</h1>
+
+    <div class="md-table-container">
+      <table class="md-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>تصویر</th>
+            <th>نام خدمت</th>
+            <th>توضیح کوتاه</th>
+            <th>دسته‌بندی</th>
+            <th>وضعیت</th>
+            <th>عملیات</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>
+              <img src="https://placehold.co/400x200?text=Web+PenTest"
+                   alt="تست نفوذ وب"
+                   class="table-thumb">
+            </td>
+            <td>تست نفوذ وب</td>
+            <td>ارزیابی امنیت وب‌سایت بر اساس OWASP</td>
+            <td>امنیت وب</td>
+            <td class="status active">فعال</td>
+            <td class="table-actions">
+              <button class="btn-filled btn-md">ویرایش</button>
+              <button class="btn-filled btn-md btn-danger">حذف</button>
+            </td>
+          </tr>
+
+          <tr>
+            <td>2</td>
+            <td>
+              <img src="https://placehold.co/400x200?text=Network+Assessment"
+                   alt="ارزیابی امنیت شبکه"
+                   class="table-thumb">
+            </td>
+            <td>ارزیابی امنیت شبکه</td>
+            <td>تحلیل تنظیمات شبکه، فایروال و سرورها</td>
+            <td>شبکه</td>
+            <td class="status active">فعال</td>
+            <td class="table-actions">
+              <button class="btn-filled btn-md">ویرایش</button>
+              <button class="btn-filled btn-md btn-danger">حذف</button>
+            </td>
+          </tr>
+
+          <tr>
+            <td>3</td>
+            <td>
+              <img src="https://placehold.co/400x200?text=Vulnerability+Scan"
+                   alt="اسکن آسیب‌پذیری"
+                   class="table-thumb">
+            </td>
+            <td>اسکن آسیب‌پذیری</td>
+            <td>شناسایی خودکار و دستی تهدیدات امنیتی</td>
+            <td>امنیت</td>
+            <td class="status inactive">غیرفعال</td>
+            <td class="table-actions">
+              <button class="btn-filled btn-md">ویرایش</button>
+              <button class="btn-filled btn-md btn-danger">حذف</button>
+            </td>
+          </tr>
+
+          <tr>
+            <td>4</td>
+            <td>
+              <img src="https://placehold.co/400x200?text=Social+Engineering"
+                   alt="مهندسی اجتماعی"
+                   class="table-thumb">
+            </td>
+            <td>تست مهندسی اجتماعی</td>
+            <td>بررسی مقاومت نیروی انسانی در برابر فیشینگ</td>
+            <td>آموزش / امنیت</td>
+            <td class="status active">فعال</td>
+            <td class="table-actions">
+              <button class="btn-filled btn-md">ویرایش</button>
+              <button class="btn-filled btn-md btn-danger">حذف</button>
+            </td>
+          </tr>
+
+          <tr>
+            <td>5</td>
+            <td>
+              <img src="https://placehold.co/400x200?text=Consulting"
+                   alt="مشاوره امنیتی"
+                   class="table-thumb">
+            </td>
+            <td>مشاوره امنیتی</td>
+            <td>طراحی و بهبود زیرساخت‌های امنیتی</td>
+            <td>مشاوره</td>
+            <td class="status active">فعال</td>
+            <td class="table-actions">
+              <button class="btn-filled btn-md">ویرایش</button>
+              <button class="btn-filled btn-md btn-danger">حذف</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="/js/loadComponents.js"></script>
+</body>
+</html>

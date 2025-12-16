@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Admin-Users</title>
+</head>
+<body>
+    <div id="header"></div>
+
+    <main class="container">
+        <h1>لیست کاربران</h1>
+
+        <div class="md-table-container">
+            <table class="md-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>نام</th>
+                        <th>ایمیل</th>
+                        <th>نقش</th>
+                        <th>وضعیت</th>
+                        <th>عملیات</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Ali Ahmadi</td>
+                        <td>ali@gmail.com</td>
+                        <td>Admin</td>
+                        <td class="status active">فعال</td>
+                        <td>
+                            <button class="btn-filled btn-md">ویرایش</button>
+                            <button class="btn-filled btn-md btn.danger">حذف</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Reza Karimi</td>
+                        <td>reza@yahoo.com</td>
+                        <td>User</td>
+                        <td class="status inactive">غیرفعال</td>
+                        <td>
+                            <button class="btn-filled btn-md">ویرایش</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="/js/loadComponents.js"></script>
+
+</body>
+
+</html>
