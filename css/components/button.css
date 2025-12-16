@@ -53,6 +53,14 @@ button, .btn {
   padding: 0 12px;
 }
 
+.btn.danger {
+  background: #d32f2f;
+}
+
+.btn.danger:hover {
+  background: #b71c1c;
+}
+
 /* x-small */
 .btn-xs {
   height: 28px;

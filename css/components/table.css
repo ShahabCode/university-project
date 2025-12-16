@@ -1,0 +1,54 @@
+.md-table-container {
+  background: var(--md-sys-color-surface-container-lowest);
+  border-radius: 12px;
+  box-shadow:
+    0 1px 2px color-mix(in srgb,
+      var(--md-sys-color-shadow) 12%,
+      transparent
+    ),
+    0 2px 6px color-mix(in srgb,
+      var(--md-sys-color-shadow) 16%,
+      transparent
+    );
+  overflow-x: auto;
+}
+
+/* TABLE */
+.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Roboto, sans-serif;
+  color: var(--md-sys-color-on-surface);
+  direction: rtl;
+}
+
+/* HEADER */
+.md-table thead {
+  background-color: var(--md-sys-color-surface-container);
+}
+
+.md-table th {
+  text-align: center;
+  padding: 16px;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--md-sys-color-on-surface-variant);
+  border-bottom: 1px solid var(--md-sys-color-outline-variant);
+}
+
+/* BODY */
+.md-table td {
+  padding: 16px;
+  font-size: 14px;
+  color: var(--md-sys-color-on-surface);
+  border-top: 1px solid var(--md-sys-color-outline-variant);
+}
+
+/* ROW INTERACTION */
+.md-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.md-table tbody tr:hover {
+  background-color: var(--md-sys-color-surface-container-high);
+}
