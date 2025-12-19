@@ -32,7 +32,7 @@ main {
 /* هر کارت */
 .service-card {
     background-color: var(--md-sys-color-surface-container);
-    border-radius: 12px;
+    border-radius: var(--md-sys-shape-corner-large-default-size);
     padding: 1.5rem;
     box-shadow:
         0px 2px 4px rgba(var(--md-sys-color-shadow-rgb), 0.14),
@@ -56,7 +56,7 @@ main {
     width: 100%;
     max-height: 180px;
     object-fit: cover;
-    border-radius: 12px;
+    border-radius: var(--md-sys-shape-corner-large-default-size);
     margin-bottom: 1rem;
 }
 
@@ -80,7 +80,7 @@ main {
     padding: 2rem;
     background-color: var(--md-sys-color-surface-container-high); /* روشن و قابل خواندن */
     color: var(--md-sys-color-on-surface); /* متن واضح */
-    border-radius: 12px;
+    border-radius: var(--md-sys-shape-corner-large-default-size);
     box-shadow: 0 4px 12px rgba(var(--md-sys-color-shadow-rgb,0,0,0), 0.12);
 }
 

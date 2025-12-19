@@ -1,7 +1,7 @@
 .card {
   background-color: var(--md-sys-color-surface-container-low);
   color: var(--md-sys-color-on-surface);
-  border-radius: 12px; 
+  border-radius: var(--md-sys-shape-corner-large-default-size); 
   padding: 2rem; 
   margin: 5px;
   margin-top: 0;
