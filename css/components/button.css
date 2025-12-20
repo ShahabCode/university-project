@@ -53,6 +53,17 @@ button, .btn {
   padding: 0 12px;
 }
 
+/* Fully round (default – Material pill) */
+.btn-round {
+  border-radius: var(--md-sys-shape-corner-full);
+}
+
+/* Square (Material small corner) */
+.btn-square {
+  border-radius: var(--md-sys-shape-corner-small);
+}
+
+
 .btn.danger {
   background: #d32f2f;
 }
@@ -101,18 +112,43 @@ button, .btn {
   height: 20px;
 }
 
+/* ----------------------------- */
+/* Material 3 — Pressed State Layer*/
+/* ----------------------------- */
+
+button:disabled,
+.btn:disabled {
+  opacity: 0.38; /* M3 spec */
+  pointer-events: none;
+  cursor: default;
+}
+
 button:hover,
 .btn:hover {
   opacity: 0.9;
+  background-image: linear-gradient(
+    rgb(var(--md-sys-color-on-surface) / 0.08),
+    rgb(var(--md-sys-color-on-surface) / 0.08)
+  );
 }
 
-/* ----------------------------- */
-/* Press (morph shape)           */
-/* ----------------------------- */
+button:focus,
+.btn:focus {
+  background-image: linear-gradient(
+    rgb(var(--md-sys-color-on-surface) / 0.12),
+    rgb(var(--md-sys-color-on-surface) / 0.12)
+  );
 
-button:active, .btn:active {
-  border-radius: var(--md-sys-shape-corner-full);
-  transform: translateY(1px);
+  outline: 2px solid var(--md-sys-color-primary);
+  outline-offset: 2px;
+}
+
+button:active,
+.btn:active {
+  background-image: linear-gradient(
+    rgb(var(--md-sys-color-on-surface) / 0.12),
+    rgb(var(--md-sys-color-on-surface) / 0.12)
+  );
 }
 
 /* ----------------------------- */
