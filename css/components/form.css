@@ -1,0 +1,104 @@
+/*=============== TEXT FIELD SIMPLE ===============*/
+.textfield-outlined input,
+.textfield-outlined select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--md-sys-color-outline);
+  border-radius: 4px;
+  background: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+  outline: none;
+  box-sizing: border-box;
+}
+
+.textfield-filled textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 4px;
+  background: var(--md-sys-color-surface-container-low);
+  color: var(--md-sys-color-on-surface);
+  outline: none;
+  box-sizing: border-box;
+}
+
+.textfield-outlined input:hover,
+.textfield-outlined input:focus,
+.textfield-outlined select:hover,
+.textfield-outlined select:focus,
+.textfield-filled textarea:hover,
+.textfield-filled textarea:focus {
+  border-color: var(--md-sys-color-primary);
+}
+
+.textfield-outlined input:disabled,
+.textfield-outlined select:disabled,
+.textfield-filled textarea:disabled {
+  background: var(--md-sys-color-surface-variant);
+  border-color: var(--md-sys-color-outline);
+  color: var(--md-sys-color-on-surface-variant);
+  cursor: not-allowed;
+}
+
+/*=============== CHECKBOX ===============*/
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--md-sys-color-on-surface);
+}
+
+.checkbox input {
+  display: none;
+}
+
+.checkbox .checkmark {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--md-sys-color-outline);
+  background: var(--md-sys-color-surface);
+}
+
+.checkbox input:checked + .checkmark {
+  background: var(--md-sys-color-primary);
+  border-color: var(--md-sys-color-primary);
+}
+
+.checkbox.disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+/*=============== RADIO ===============*/
+.radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--md-sys-color-on-surface);
+}
+
+.radio input {
+  display: none;
+}
+
+.radio .radiomark {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--md-sys-color-outline);
+  border-radius: 50%;
+  background: var(--md-sys-color-surface);
+}
+
+.radio input:checked + .radiomark {
+  background: var(--md-sys-color-primary);
+  border-color: var(--md-sys-color-primary);
+}
+
+.radio.disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
