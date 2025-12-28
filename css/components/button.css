@@ -63,6 +63,14 @@ button, .btn {
   border-radius: var(--md-sys-shape-corner-small);
 }
 
+.add-btn {
+  margin: 8px;
+  padding: 8px 12px;
+  background: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  border: none;
+  border-radius: 8px;
+}
 
 .btn.danger {
   background: #d32f2f;
@@ -132,8 +140,8 @@ button:hover,
   );
 }
 
-button:focus,
-.btn:focus {
+button:focus-visible,
+.btn:focus-visible {
   background-image: linear-gradient(
     rgb(var(--md-sys-color-on-surface) / 0.12),
     rgb(var(--md-sys-color-on-surface) / 0.12)
@@ -159,3 +167,76 @@ button:active,
   background-color: var(--md-sys-color-secondary);
   color: var(--md-sys-color-on-secondary);
 }
+
+/* ----------------------------- */
+/* Material 3 — Icon Button */
+/* ----------------------------- */
+
+.btn-icon {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 50%;
+
+  background: transparent;
+  color: var(--md-sys-color-on-surface);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-icon:hover {
+  background-color: rgb(var(--md-sys-color-on-surface) / 0.08);
+}
+
+.btn-icon:active {
+  background-color: rgb(var(--md-sys-color-on-surface) / 0.12);
+}
+
+.btn-icon .icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* ----------------------------- */
+/* Material 3 — FAB */
+/* ----------------------------- */
+
+.fab-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+
+  background-color: var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-on-primary-container);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow:
+    0 3px 5px rgb(var(--md-sys-color-shadow) / 0.2),
+    0 6px 10px rgb(var(--md-sys-color-shadow) / 0.14);
+}
+
+
+.fab-btn:hover {
+  background-image: linear-gradient(
+    rgb(var(--md-sys-color-on-primary) / 0.08),
+    rgb(var(--md-sys-color-on-primary) / 0.08)
+  );
+}
+
+.fab-btn:active {
+  background-image: linear-gradient(
+    rgb(var(--md-sys-color-on-primary) / 0.12),
+    rgb(var(--md-sys-color-on-primary) / 0.12)
+  );
+}
+
