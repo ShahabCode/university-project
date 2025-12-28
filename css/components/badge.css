@@ -1,0 +1,31 @@
+.badge-btn {
+  position: relative;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+}
+
+.badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  background: var(--md-sys-color-error-container);
+}
+
+.badge--small {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.badge--large {
+  min-width: 14px;
+  height: 14px;
+  padding: 0 5px;
+  border-radius: 9px;
+  color: var(--md-sys-color-on-error-container);
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+}
