@@ -1,0 +1,64 @@
+.md-switch {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* مخفی کردن checkbox */
+.md-switch input {
+  display: none;
+}
+
+/* Track (مسیر) */
+.track {
+  width: 52px;
+  height: 32px;
+  background: var(--md-sys-color-surface-variant);
+  border-radius: 16px;
+  position: relative;
+  transition: background 0.2s ease;
+}
+
+/* Thumb (دایره) */
+.thumb {
+  width: 24px;
+  height: 24px;
+  background: var(--md-sys-color-outline);
+  border-radius: 50%;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  transition: all 0.2s ease;
+}
+
+.md-switch input:checked + .track {
+  background: var(--md-sys-color-primary);
+}
+
+.md-switch input:checked + .track .thumb {
+  left: 24px;
+  background: var(--md-sys-color-on-primary);
+}
+
+.md-switch:hover .track {
+  filter: brightness(0.95);
+}
+
+.md-switch input:focus + .track {
+  outline: 2px solid var(--md-sys-color-primary);
+  outline-offset: 2px;
+}
+
+.md-switch:active .thumb {
+  transform: scale(0.9);
+}
+
+.md-switch input:disabled + .track {
+  background: var(--md-sys-color-surface-container-highest);
+  cursor: not-allowed;
+}
+
+.md-switch input:disabled + .track .thumb {
+  background: var(--md-sys-color-outline);
+  opacity: 0.5;
+}
