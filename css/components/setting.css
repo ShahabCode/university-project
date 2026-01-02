@@ -1,0 +1,19 @@
+.settings-container {
+  width: 400px;
+  margin: 50px auto;
+  background: var(--md-sys-color-on-secondary-container);
+  padding: 24px;
+  border-radius: 12px;
+}
+
+.settings-container h1 {
+  margin-bottom: 24px;
+}
+
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--md-sys-color-surface-variant);
+}
