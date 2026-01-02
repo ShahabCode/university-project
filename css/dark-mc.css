@@ -1,5 +1,5 @@
-.dark-medium-contrast {
-  --md-sys-color-primary: rgb(236 211 255);
+body.dark {
+  --md-sys-color-primary: rgb(190, 141, 239);
   --md-sys-color-surface-tint: rgb(219 185 249);
   --md-sys-color-on-primary: rgb(51 24 77);
   --md-sys-color-primary-container: rgb(163 132 192);

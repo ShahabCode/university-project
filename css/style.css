@@ -1,6 +1,7 @@
 /* Import Vazir font */
 @import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css');
 @import url('./light-hc.css');
+@import url('./dark-mc.css');
 @import url('components/components.css');
 
 /* ========== */
@@ -13,6 +14,8 @@
 * {
   box-sizing: border-box;
   font-family: 'Vazir', sans-serif;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 body {
@@ -95,10 +98,16 @@ a:hover {
   box-shadow: 0 0 0 1px var(--md-sys-color-shadow); 
 }
 
+main {
+  padding-top: 150px;
+}
+
 /* ========== header ========== */
 
 header {
   display: flex;
+  position: fixed;
+  width: 100%;
   direction: ltr;
   justify-content: space-between;
   align-items: center;
