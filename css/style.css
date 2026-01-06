@@ -118,6 +118,7 @@ header {
   border-radius: 0;
   margin-top: 0;
   margin-bottom: 40px;
+  z-index: 1000; /* مطمئن شوید بالاتر از کارت‌ها است */
 }
 
 .logo img {

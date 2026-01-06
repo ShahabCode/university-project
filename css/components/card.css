@@ -29,6 +29,11 @@
       transparent);
 }
 
+.service-card {
+  overflow: hidden;
+}
+
+
 /*  */
 
 /* Hover */
