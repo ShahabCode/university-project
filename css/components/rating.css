@@ -1,34 +1,54 @@
 .rating {
   display: flex;
-  justify-content: center;   /* وسط کارت */
-  gap: 0.3rem;               /* فاصله بین ستاره‌ها */
-  margin-top: 0.75rem;       /* فاصله از دکمه */
+  justify-content: center;
+  gap: 0.3rem;
+  margin-top: 0.75rem;
 }
 
 .rating .star {
+  position: relative; /* مهم */
   background: none;
   border: none;
   cursor: pointer;
 
-  font-size: 1.4rem;         /* اندازه مناسب */
-  padding: 0;                /* جلوگیری از بیرون زدن */
+  font-size: 1.4rem;
+  padding: 0;
   line-height: 1;
-
   color: var(--md-sys-color-outline);
-  transition: transform 0.15s ease, color 0.2s ease;
+}
+
+.rating .star i {
+  pointer-events: none;
+  position: relative;
+  z-index: 2;
+}
+
+/* ⭐ لایه پر (hidden by default) */
+.rating .star::after {
+  content: "\f005"; /* star */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900; /* solid */
+  
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: gold;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.15s ease;
+  z-index: 1;
+}
+
+/* فعال = ستاره پر */
+.rating .star.active::after {
+  opacity: 1;
+  color: gold;
 }
 
 /* hover */
 .rating .star:hover {
-  transform: scale(1.15);
-}
-
-/* فعال (طلایی) */
-.rating .star.active i {
-  color: gold;
-}
-
-/* آیکن */
-.rating .star i {
-  pointer-events: none;
+  transform: scale(1.09);
+  
 }
