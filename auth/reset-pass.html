@@ -4,64 +4,69 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="../css/style.css">
-  <title>بازیابی رمز عبور</title>
+  <title>ثبت نام</title>
 </head>
- <body>
+<body>
 
   <div id="header"></div>
 
-  <main>
-   <div class="form-wrapper">
-    <section class="card">
-      <h1>بازیابی رمز عبور</h1>
-      <p>رمز عبور جدید خود را وارد کنید.</p>
+    <main class="login-page">
+      <div class="form-wrapper">
+        <section class="card form-card">
+          <h1 id="auth-heading">بازیابی رمز عبور</h1>
+          <p class="form-subtitle">رمز عبور جدید خود را وارد کنید.</p>
 
-      <!-- فرم -->
-      <form action="login.html" method="get">
-        <!-- رمز جدید -->
-        <div >
-          <label for="new-password">رمز عبور جدید:</label>
-          <input
-            type="password"
-            id="new-password"
-            name="new-password"
-            placeholder="رمز جدید"
-            required
-          />
-        </div>
+          <form class="form" action="login.html" method="get" novalidate>
 
-        <!-- تکرار رمز -->
-        <div>
-          <label for="confirm-password">تکرار رمز عبور:</label>
-          <input
-            type="password"
-            id="confirm-password"
-            name="confirm-password"
-            placeholder="تکرار رمز جدید"
-            required
-          />
-        </div>
+            <!-- رمز جدید -->
+            <div class="form-field textfield-outlined">
+              <label for="new-password" class="form-label">رمز عبور جدید</label>
+              <input
+                type="password"
+                id="new-password"
+                name="new-password"
+                placeholder="رمز جدید"
+                required
+                autofocus
+              />
+              <span class="field-error"></span>
+            </div>
 
-        <!-- دکمه ذخیره -->
-        <div>
-          <button class="btn btn-filled btn-md" type="submit">ذخیره رمز جدید</button>
-        </div>
+            <!-- تکرار رمز -->
+            <div class="form-field textfield-outlined">
+              <label for="confirm-password" class="form-label">تکرار رمز عبور</label>
+              <input
+                type="password"
+                id="confirm-password"
+                name="confirm-password"
+                placeholder="تکرار رمز جدید"
+                required
+              />
+              <span class="field-error"></span>
+            </div>
 
-        <!-- بازگشت به ورود -->
-        <div>
-          <p>
-            <a href="login.html">بازگشت به صفحه ورود</a>
-          </p>
-        </div>
-      </form>
-    </section>
-   <div class="form-wrapper"></div>
-  </main>
+            <!-- دکمه -->
+            <div class="form-actions">
+              <button class="btn btn-filled btn-md" type="submit">
+                ذخیره رمز جدید
+              </button>
+            </div>
+
+            <!-- لینک -->
+            <div class="form-footer">
+              <a href="login.html">بازگشت به صفحه ورود</a>
+            </div>
+
+          </form>
+        </section>
+      </div>
+    </main>
 
   <div id="footer"></div>
 
-  <script src="/js/loadComponents.js"></script>
-  <script src="/js/darkmode.js"></script>
+<script src="/js/loadComponents.js"></script>
+<script src="/js/darkmode.js"></script>
+<script src="/js/formValidation.js"></script>
 
 </body>
 </html>

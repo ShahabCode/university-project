@@ -1,61 +1,124 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/style.css">
-    <title>تماس با ما</title>
-  </head>
- <body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>تماس با ما</title>
+</head>
+<body>
 
   <div id="header"></div>
   
-  <main>
-   <section class="card">
-    <a href="myTeam.html">تیم ما</a><br>
-    <a href="aboutUs.html">درباره ما</a>
+  <main id="main" class="login-page" aria-labelledby="contact-heading">
+    <div class="form-wrapper">
 
-    <h1>تماس با ما</h1>
-    <p>لطفاً فرم زیر را تکمیل کنید و ارسال نمایید.</p>
-    <form action="#" method="post">
-      <div>
-        <label for="name">نام و نام خانوادگی</label><br>
-        <input type="text" id="name" name="name" required>
-      </div>
+      <section class="card" role="region" aria-label="فرم تماس با ما">
 
-      <div>
-        <label for="email">ایمیل</label><br>
-        <input type="email" id="email" name="email" required>
-      </div>
+        <h1 id="auth-heading">تماس با ما</h1>
 
-      <div>
-        <label for="phone">تلفن (اختیاری)</label><br>
-        <input type="tel" id="phone" name="phone">
-      </div>
+        <p class="form-description">
+          لطفاً فرم زیر را تکمیل کنید و ارسال نمایید.
+        </p>
 
-      <div>
-        <label for="subject">موضوع</label><br>
-        <input type="text" id="subject" name="subject">
-      </div>
+       <form action="#" method="post" class="form">
 
-      <div>
-        <label for="message">پیام</label><br>
-        <textarea id="message" name="message" rows="6" required></textarea>
-      </div>
+        <!-- Full Name -->
+        <div class="form-field textfield-outlined">
+          <label for="name" class="form-label">
+            نام و نام خانوادگی
+          </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="علی رضایی"
+            required
+            autofocus
+          />
+          <span class="field-error"></span>
+        </div>
 
-      <div>
-        <button class="btn btn-filled btn-md" type="submit">ارسال</button>
-      </div>
-    </form>
-  </section>
- </main>
+        <!-- Email -->
+        <div class="form-field textfield-outlined">
+          <label for="email" class="form-label">
+            ایمیل
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@email.com"
+            required
+          />
+          <span class="field-error"></span>
+        </div>
+
+        <!-- Phone -->
+        <div class="form-field textfield-outlined">
+          <label for="phone" class="form-label">
+            تلفن (اختیاری)
+          </label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="09123456789"
+          />
+          <span class="field-error"></span>
+        </div>
+
+        <!-- Subject -->
+        <div class="form-field textfield-outlined">
+          <label for="subject" class="form-label">
+            موضوع
+          </label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="مثلاً درخواست پشتیبانی"
+          />
+          <span class="field-error"></span>
+        </div>
+
+        <!-- Message -->
+        <div class="form-field textfield-outlined">
+          <label for="message" class="form-label">
+            پیام
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            rows="6"
+            placeholder="پیام خود را اینجا بنویسید..."
+            required
+          ></textarea>
+        </div>
+
+        <!-- Submit -->
+        <div class="form-field">
+          <button class="btn btn-filled btn-md" type="submit">
+            ارسال
+          </button>
+        </div>
+
+      </form>
+
+      </section>
+    </div>
+  </main>
     
-    <div id="footer"></div>
+  <div id="footer"></div>
 
-    <button class="fab-btn" id="goTopBtn">⬆️</button>
-    <script src="/js/fab.js"></script>
-    <script src="/js/loadComponents.js"></script>
-    <script src="/js/darkmode.js"></script>
+  <button class="fab-btn" id="goTopBtn" aria-label="بازگشت به بالا">
+    ⬆️
+  </button>
+
+  <script src="/js/fab.js"></script>
+  <script src="/js/loadComponents.js"></script>
+  <script src="/js/darkmode.js"></script>
+  <script src="/js/formValidation.js"></script>
     
-  </body>
+</body>
 </html>

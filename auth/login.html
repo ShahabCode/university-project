@@ -15,25 +15,32 @@
 <main id="main" class="login-page" aria-labelledby="login-heading">
     <div class="form-wrapper">
     <section class="card" role="region" aria-label="فرم ورود">
-      <h1 id="login-heading">ورود به حساب</h1>
+      <h1 id="auth-heading">ورود به حساب</h1>
 
         <!-- فرم ورود -->
-      <form action="#" method="post">
-      <!-- ایمیل یا نام کاربری -->
-      <div>
-        <label for="email">ایمیل یا نام کاربری:</label>
+     <form action="#" method="post" class="form">
+
+  <!-- Email -->
+      <div class="form-field textfield-outlined">
+        <label for="email" class="form-label">
+          ایمیل یا نام کاربری
+        </label>
         <input
           type="text"
           id="email"
           name="email"
           placeholder="you@example.com"
           required
+          autofocus
         />
+        <span class="field-error"></span>
       </div>
 
-      <!-- رمز عبور -->
-      <div>
-        <label for="password">رمز عبور:</label>
+      <!-- Password -->
+      <div class="form-field textfield-outlined">
+        <label for="password" class="form-label">
+          رمز عبور
+        </label>
         <input
           type="password"
           id="password"
@@ -41,19 +48,24 @@
           placeholder="رمز عبور شما"
           required
         />
+        <span class="field-error"></span>
       </div>
 
-      <!-- دکمه ورود -->
-      <div>
-        <button class="btn btn-filled btn-md" type="submit">ورود</button>
+      <!-- Submit -->
+      <div class="form-field">
+        <button type="submit" class="btn btn-filled btn-md">
+          ورود
+        </button>
       </div>
 
-      <!-- لینک‌ها -->
-      <div>
+      <!-- Links -->
+      <div class="form-links">
         <a href="forgot-pass.html">رمز را فراموش کرده‌اید؟</a> |
         <a href="register.html">ثبت نام</a>
       </div>
-    </form>
+
+ </form>
+
    </section>
   </div>
 </main>
@@ -62,6 +74,7 @@
 
 <script src="/js/loadComponents.js"></script>
 <script src="/js/darkmode.js"></script>
+<script src="/js/formValidation.js"></script>
 
 </body>
 </html>

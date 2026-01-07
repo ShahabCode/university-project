@@ -6,50 +6,66 @@
   <link rel="stylesheet" href="../css/style.css">
   <title>تأیید کد یک‌بار مصرف</title>
 </head>
- <body>
+<body>
 
   <div id="header"></div>
 
-  <main>
-   <div class="form-wrapper">
-    <section class="card">
-      <h1>تأیید کد یک‌بار مصرف (OTP)</h1>
-      <p>کدی که به ایمیل یا شماره شما ارسال شده را وارد کنید.</p>
+  <main id="main" class="login-page" aria-labelledby="otp-heading">
+    <div class="form-wrapper">
+      <section class="card" role="region" aria-label="فرم تأیید کد یک‌بار مصرف">
+        <h1 id="auth-heading">تأیید کد یک‌بار مصرف (OTP)</h1>
 
-      <form action="reset-pass.html" method="get">
-        <!-- ورودی کد -->
-        <div >
-          <label for="otp">کد تأیید:</label>
-          <input
-            type="text"
-            id="otp"
-            name="otp"
-            maxlength="6"
-            placeholder="مثلاً 123456"
-            required
-          />
-        </div>
+        <p class="form-description">
+          کدی که به ایمیل یا شماره شما ارسال شده را وارد کنید.
+        </p>
 
-        <!-- دکمه تأیید -->
-        <div>
-          <button class="btn btn-filled btn-md" type="submit">تأیید</button>
-        </div>
+        <form action="reset-pass.html" method="get" class="form">
 
-        <!-- دکمه ارسال مجدد -->
-        <div>
-          <button class="btn btn-filled btn-md" type="button" onclick="resendCode()">ارسال مجدد کد</button>
-        </div>
+          <!-- OTP Code -->
+          <div class="form-field textfield-outlined">
+            <label for="otp" class="form-label">
+              کد تأیید
+            </label>
+            <input
+              type="text"
+              id="otp"
+              name="otp"
+              maxlength="6"
+              inputmode="numeric"
+              placeholder="مثلاً 123456"
+              required
+              autofocus
+            />
+            <span class="field-error"></span>
+          </div>
 
-        <!-- بازگشت به ورود -->
-        <div>
-          <p>
+          <!-- Submit -->
+          <div class="form-field">
+            <button class="btn btn-filled btn-md" type="submit">
+              تأیید
+            </button>
+          </div>
+
+          <!-- Resend -->
+          <div class="form-field">
+            <button
+              class="btn btn-outlined btn-md"
+              type="button"
+              onclick="resendCode()"
+            >
+              ارسال مجدد کد
+            </button>
+          </div>
+
+          <!-- Back -->
+          <div class="form-links">
             <a href="login.html">بازگشت به صفحه ورود</a>
-          </p>
-        </div>
-      </form>
-    </section>
-  </div>
- </main>
+          </div>
+
+        </form>
+      </section>
+    </div>
+  </main>
 
   <div id="footer"></div>
 
@@ -58,8 +74,9 @@
       alert("کد جدید برای شما ارسال شد ✅");
     }
   </script>
-  
+
   <script src="/js/loadComponents.js"></script>
   <script src="/js/darkmode.js"></script>
+  <script src="/js/formValidation.js"></script>
 </body>
 </html>

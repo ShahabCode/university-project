@@ -6,48 +6,58 @@
   <link rel="stylesheet" href="../css/style.css">
   <title>فراموشی رمز عبور</title>
 </head>
- <body>
+<body>
 
   <div id="header"></div>
 
-  <main>
-   <div class="form-wrapper">
-    <section class="card">
-      <h1>بازیابی رمز عبور</h1>
+  <main id="main" class="login-page" aria-labelledby="forgot-heading">
+    <div class="form-wrapper">
+      <section class="card" role="region" aria-label="فرم بازیابی رمز عبور">
+        <h1 id="auth-heading">بازیابی رمز عبور</h1>
 
-      <form action="otp.html" method="get">
-        <!-- فیلد ایمیل -->
-        <div >
-          <label for="email">ایمیل خود را وارد کنید:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="you@example.com"
-            required
-          />
-        </div>
+        <form action="otp.html" method="get" class="form">
 
-        <!-- دکمه ارسال -->
-        <div>
-          <button class="btn btn-filled btn-md" type="submit" >ارسال لینک بازیابی</button>
-        </div>
+          <!-- Email -->
+          <div class="form-field textfield-outlined">
+            <label for="email" class="form-label">
+              ایمیل خود را وارد کنید
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="you@example.com"
+              required
+              autofocus
+            />
+            <span class="field-error"></span>
+          </div>
 
-        <!-- لینک بازگشت -->
-        <div>
-          <p>
-            رمز را به یاد آوردید؟
-            <a href="login.html">بازگشت به صفحه ورود</a>
-          </p>
-        </div>
-      </form>
-    </section>
-  <div class="form-wrapper"></div>
- </main>
+          <!-- Submit -->
+          <div class="form-field">
+            <button class="btn btn-filled btn-md" type="submit">
+              ارسال لینک بازیابی
+            </button>
+          </div>
 
- <div id="footer"></div>
- <script src="/js/loadComponents.js"></script>
- <script src="/js/darkmode.js"></script>
+          <!-- Back to login -->
+          <div class="form-links">
+            <p>
+              رمز را به یاد آوردید؟
+              <a href="login.html">بازگشت به صفحه ورود</a>
+            </p>
+          </div>
+
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="/js/loadComponents.js"></script>
+  <script src="/js/darkmode.js"></script>
+  <script src="/js/formValidation.js"></script>
 
 </body>
 </html>

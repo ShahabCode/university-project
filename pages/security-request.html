@@ -1,64 +1,153 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/style.css">
-    <title>تماس با ما</title>
-  </head>
- <body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>درخواست ارزیابی امنیتی</title>
+</head>
+<body>
 
   <div id="header"></div>
-   <main>
+
+  <main id="main">
+
+    <!-- Hero / Page Header -->
     <section class="page-header hero">
-        <h1>درخواست ارزیابی امنیتی و مشاوره</h1>
-        <p>لطفاً فرم زیر را با دقت پر کنید تا تیم ما در اسرع وقت با شما تماس بگیرد.</p>
+      <h1>درخواست ارزیابی امنیتی و مشاوره</h1>
+      <p>
+        لطفاً فرم زیر را با دقت پر کنید تا تیم ما در اسرع وقت با شما تماس بگیرد.
+      </p>
     </section>
 
-    <!-- فرم -->
-   <div class="reqSecurity">
-    <section class="card">
-        <form action="#" method="post">
-            <label for="name">نام کامل</label>
-            <input class="textfield-outlined" type="text" id="name" name="name" placeholder="نام و نام خانوادگی خود را وارد کنید" required>
+    <!-- Form Section -->
+    <section class="login-page reqSecurity">
+      <div class="form-wrapper">
 
-            <label for="email">ایمیل</label>
-            <input class="textfield-outlined" type="email" id="email" name="email" placeholder="example@email.com" required>
+        <section class="card" role="region" aria-label="فرم درخواست ارزیابی امنیتی">
 
-            <label for="company">نام شرکت / سازمان</label>
-            <input class="textfield-outlined" type="text" id="company" name="company" placeholder="در صورت وجود">
+          <form action="#" method="post" class="form">
 
-            <label for="phoneNum">شماره</label>
-            <input class="textfield-outlined" type="number" id="phoneNum" name="phoneNum" placeholder="09122121212" required>
+            <!-- Full Name -->
+            <div class="form-field textfield-outlined">
+              <label for="name" class="form-label">نام کامل</label>
+              <input
+                type="text"
+                id="name"
+                name="fullname"
+                placeholder="نام و نام خانوادگی خود را وارد کنید"
+                required
+                autofocus
+              />
+            <span class="field-error"></span>
+            </div>
 
-            <label for="website">آدرس وب‌سایت</label>
-            <input class="textfield-outlined" type="url" id="website" name="website" placeholder="https://example.com">
+            <!-- Email -->
+            <div class="form-field textfield-outlined">
+              <label for="email" class="form-label">ایمیل</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="example@email.com"
+                required
+              />
+            <span class="field-error"></span>
+            </div>
 
-            <label for="service">نوع خدمات مورد نظر</label>
-            <select class="textfield-outlined" id="service" name="service" required>
+            <!-- Company -->
+            <div class="form-field textfield-outlined">
+              <label for="company" class="form-label">
+                نام شرکت / سازمان
+              </label>
+              <input
+                type="text"
+                id="company"
+                name="company"
+                placeholder="در صورت وجود"
+              />
+            <span class="field-error"></span>
+            </div>
+
+            <!-- Phone -->
+            <div class="form-field textfield-outlined">
+              <label for="phoneNum" class="form-label">شماره تماس</label>
+              <input
+                type="tel"
+                id="phoneNum"
+                name="phoneNum"
+                placeholder="09122121212"
+                required
+              />
+            <span class="field-error"></span>
+            </div>
+
+            <!-- Website -->
+            <div class="form-field textfield-outlined">
+              <label for="website" class="form-label">آدرس وب‌سایت</label>
+              <input
+                type="url"
+                id="website"
+                name="website"
+                placeholder="https://example.com"
+              />
+            <span class="field-error"></span>
+            </div>
+
+            <!-- Service Type -->
+            <div class="form-field textfield-outlined">
+              <label for="service" class="form-label">
+                نوع خدمات مورد نظر
+              </label>
+              <select id="service" name="service" required>
                 <option value="">انتخاب کنید...</option>
                 <option value="web">تست نفوذ وب</option>
                 <option value="network">ارزیابی امنیت شبکه</option>
                 <option value="vuln">اسکن آسیب‌پذیری</option>
                 <option value="social">مهندسی اجتماعی</option>
                 <option value="consult">مشاوره امنیتی</option>
-            </select>
+              </select>
+            </div>
 
-            <label for="details">توضیحات بیشتر</label>
-            <textarea class="textfield-outlined" id="details" name="details" rows="5" placeholder="در صورت نیاز جزئیات بیشتری بنویسید..."></textarea>
+            <!-- Details -->
+            <div class="form-field textfield-outlined">
+              <label for="details" class="form-label">
+                توضیحات بیشتر
+              </label>
+              <textarea
+                id="details"
+                name="details"
+                rows="5"
+                placeholder="در صورت نیاز جزئیات بیشتری بنویسید..."
+              ></textarea>
+            </div>
 
-            <button class="btn btn-filled btn-md" type="submit">ارسال درخواست</button>
-        </form>
+            <!-- Submit -->
+            <div class="form-field">
+              <button class="btn btn-filled btn-md" type="submit">
+                ارسال درخواست
+              </button>
+            </div>
+
+          </form>
+
+        </section>
+      </div>
     </section>
-   </div>
+
   </main>
 
-    <div id="footer"></div>
+  <div id="footer"></div>
 
-    <button class="fab-btn" id="goTopBtn">⬆️</button>
-    <script src="/js/fab.js"></script>
-    <script src="/js/loadComponents.js"></script>
-    <script src="/js/darkmode.js"></script>
-    
-  </body>
+  <button class="fab-btn" id="goTopBtn" aria-label="بازگشت به بالا">
+    ⬆️
+  </button>
+
+  <script src="/js/fab.js"></script>
+  <script src="/js/loadComponents.js"></script>
+  <script src="/js/darkmode.js"></script>
+  <script src="/js/formValidation.js"></script>
+
+
+</body>
 </html>
