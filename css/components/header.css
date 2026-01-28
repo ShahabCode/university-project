@@ -1,0 +1,193 @@
+/* ====================== TOPBAR ====================== */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 78px;
+  background: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-left .logo img {
+  height: 60px;
+  object-fit: contain;
+}
+
+#authLink a {
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  margin-left: 1rem;
+  padding: 0.5rem;
+  text-decoration: none;
+  border-radius: var(--md-sys-shape-corner-medium-default-size);
+  font-weight: 500;
+}
+
+#authLink a:hover {
+  background: var(--md-sys-color-primary-container);
+  opacity: 0.8;
+}
+
+/* ====================== NAV LINKS ====================== */
+.topbar nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  direction: rtl;
+}
+
+.topbar nav a {
+  color: var(--md-sys-color-on-primary);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0.8rem;
+  border-radius: var(--md-sys-shape-corner-medium-default-size);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.topbar nav a:hover {
+  background: var(--md-sys-color-primary-container);
+}
+
+/* ====================== HAMBURGER ====================== */
+.menu {
+  position: relative;
+}
+
+.hamburger {
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  padding: 10px;
+  background: transparent;
+}
+
+.hamburger span {
+  height: 2px;
+  width: 100%;
+  background: var(--md-sys-color-on-primary);
+  border-radius: 999px;
+}
+
+/* ====================== DROPDOWN ====================== */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 200px;
+  background: var(--md-sys-color-surface);
+  border: 1px solid var(--md-sys-color-outline);
+  border-radius: 12px;
+  padding: 8px;
+  display: none;
+  z-index: 999;
+}
+
+.dropdown ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dropdown a {
+  display: block;
+  text-decoration: none;
+  color: var(--md-sys-color-on-surface);
+  padding: 8px 12px;
+  border-radius: 12px;
+}
+
+/* ====================== HOVER EFFECT ====================== */
+.menu:hover .dropdown {
+  display: block;
+}
+
+/* ====================== DROPDOWN (RESPONSIVE) ====================== */
+@media (max-width: 899px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .dropdown {
+    display: none; /* پیش‌فرض مخفی */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    flex-direction: column;
+    background: var(--md-sys-color-primary);
+    border: 1px solid var(--md-sys-color-outline);
+    border-radius: 12px;
+    padding: 8px;
+    z-index: 999;
+  }
+
+  .dropdown.open {
+    display: flex; /* وقتی کلاس open اضافه شد نمایش داده شود */
+    flex-direction: column;
+  }
+
+  .dropdown ul {
+    flex-direction: column; /* اطمینان از عمودی بودن */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .dropdown a {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 4px;
+    border-radius: 8px;
+    background:var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+    text-align: right;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+
+  /* .dropdown a:hover {
+    background: var(--md-sys-color-surface-tint);
+    color: var(--md-sys-color-primary);
+  } */
+}
+
+
+@media (min-width: 900px) {
+  /* همبرگر مخفی روی دسکتاپ */
+  .hamburger {
+    display: none;
+  }
+
+  .topbar nav {
+    display: flex !important;
+    position: static;
+    background: transparent;
+    border: none;
+    width: auto;
+    padding: 0;
+  }
+
+  .topbar nav ul {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
