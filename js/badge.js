@@ -5,6 +5,6 @@ const buttons = document.querySelectorAll(".add-btn");
 buttons.forEach(btn => {
   btn.addEventListener("click", () => {
     count++;
-    badge.textContent = count;
+    cartBadge.textContent = count;
   });
 });
