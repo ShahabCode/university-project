@@ -11,129 +11,283 @@
 
     <div id="header"></div>
   <main>
-   <!-- عنوان صفحه -->
-    <section class="page-header hero">
-        <h1>خدمات امنیت سایبری Epic Hunter</h1>
-        <p>خدمات تخصصی ما برای حفظ امنیت اطلاعات و زیرساخت‌های دیجیتال شما</p>
-    </section>
+  <!-- عنوان صفحه -->
+  <section class="page-header hero">
+    <h1>خدمات امنیت سایبری Epic Hunter</h1>
+    <p>خدمات تخصصی ما برای حفظ امنیت اطلاعات و زیرساخت‌های دیجیتال شما</p>
+  </section>
 
-    <!-- کارت‌های خدمات -->
-    <section class="services">
-        <div class="service-card card-elevation-1">
-            <img src="https://placehold.co/400x200?text=Web+PenTest" alt="تست نفوذ وب">
-            <h3>تست نفوذ وب (Web Penetration Testing)</h3>
-            <p>
-                ما با استفاده از متدولوژی‌های OWASP، امنیت وب‌سایت شما را ارزیابی کرده و گزارش کامل از آسیب‌پذیری‌ها ارائه می‌دهیم.
-            </p>
-            <a href="/pages/security-request.html" class="btn btn-filled btn-md">مشترک شوید</a>
+  <!-- نوار ابزار لیست خدمات (Search + Filter + Sort) -->
+  <section class="services-toolbar card-elevation-1">
 
-            <div class="rating">
-              <button class="star" data-star="1"><i class="fa-regular fa-star"></i></button>
-              <button class="star" data-star="2"><i class="fa-regular fa-star"></i></button>
-              <button class="star" data-star="3"><i class="fa-regular fa-star"></i></button>
-              <button class="star" data-star="4"><i class="fa-regular fa-star"></i></button>
-              <button class="star" data-star="5"><i class="fa-regular fa-star"></i></button>
-            </div>
-            
-            <button class="btn-icon" id="heart" aria-label="Favorite">
-              <i class="fa-regular fa-heart icon"></i>
-            </button>
-        </div>
+    <!-- سرچ -->
+    <div class="toolbar-item search-box">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input id="searchInput" type="text" placeholder="جستجو در خدمات (مثلاً Web, Network...)" />
+    </div>
 
-        <div class="service-card card-elevation-1">
-            <img src="https://placehold.co/400x200?text=Network+Assessment" alt="ارزیابی امنیت شبکه">
-            <h3>ارزیابی امنیت شبکه (Network Assessment)</h3>
-            <p>
-                تحلیل ساختار شبکه و شناسایی نقاط ضعف در تنظیمات سرورها، فایروال‌ها و سرویس‌های فعال برای تقویت امنیت کلی زیرساخت.
-            </p>
-            <a href="/pages/security-request.html" class="btn btn-filled btn-md">مشترک شوید</a>
+    <!-- فیلتر دسته بندی -->
+    <div class="toolbar-item">
+      <label class="toolbar-label" for="categoryFilter">دسته‌بندی</label>
+      <select id="categoryFilter">
+        <option value="all">همه</option>
+        <option value="web">وب</option>
+        <option value="network">شبکه</option>
+        <option value="vuln">آسیب‌پذیری</option>
+        <option value="social">مهندسی اجتماعی</option>
+        <option value="consulting">مشاوره</option>
+      </select>
+    </div>
 
-            <div class="rating">
-              <button class="star" data-star="1"><i class="fa-regular fa-star"></i></button>
-              <button class="star" data-star="2"><i class="fa-regular fa-star"></i></button>
-              <button class="star" data-star="3"><i class="fa-regular fa-star"></i></button>
-              <button class="star" data-star="4"><i class="fa-regular fa-star"></i></button>
-              <button class="star" data-star="5"><i class="fa-regular fa-star"></i></button>
-            </div>
+    <!-- فیلتر امتیاز -->
+    <div class="toolbar-item">
+      <label class="toolbar-label" for="ratingFilter">حداقل امتیاز</label>
+      <select id="ratingFilter">
+        <option value="0">همه</option>
+        <option value="3">۳+</option>
+        <option value="4">۴+</option>
+        <option value="5">۵</option>
+      </select>
+    </div>
 
-            <button class="btn-icon" id="heart" aria-label="Favorite">
-              <i class="fa-regular fa-heart icon"></i>
-            </button>
-        </div>
+    <!-- مرتب سازی -->
+    <div class="toolbar-item">
+      <label class="toolbar-label" for="sortSelect">مرتب‌سازی</label>
+      <select id="sortSelect">
+        <option value="featured">پیشنهادی</option>
+        <option value="rating_desc">امتیاز بیشتر</option>
+        <option value="name_asc">نام (A → Z)</option>
+        <option value="name_desc">نام (Z → A)</option>
+      </select>
+    </div>
 
-        <div class="service-card card-elevation-1">
-            <img src="https://placehold.co/400x200?text=Vulnerability+Scan" alt="اسکن آسیب‌پذیری">
-            <h3>اسکن آسیب‌پذیری‌ها (Vulnerability Scanning)</h3>
-            <p>
-                شناسایی خودکار و دستی تهدیدات امنیتی با استفاده از ابزارهای تخصصی و تحلیل نتایج برای ارائه راهکارهای اصلاحی دقیق.
-            </p>
-            <a href="/pages/security-request.html" class="btn btn-filled btn-md">مشترک شوید</a>
+    <!-- چک‌باکس علاقه‌مندی -->
+    <div class="toolbar-item toolbar-check">
+      <input type="checkbox" id="onlyFavorites" />
+      <label for="onlyFavorites">فقط علاقه‌مندی‌ها</label>
+    </div>
+  </section>
 
-            <div class="rating">
-              <button class="star" data-star="1"><i class="fa-regular fa-star"></i></button>
-              <button class="star" data-star="2"><i class="fa-regular fa-star"></i></button>
-              <button class="star" data-star="3"><i class="fa-regular fa-star"></i></button>
-              <button class="star" data-star="4"><i class="fa-regular fa-star"></i></button>
-              <button class="star" data-star="5"><i class="fa-regular fa-star"></i></button>
-            </div>
+  <!-- لینک‌های سریع -->
+  <section class="quick-links">
+    <a href="#bestSelling" class="chip-link">
+      <i class="fa-solid fa-fire"></i>
+      پرفروش‌ها
+    </a>
 
-            <button class="btn-icon" id="heart" aria-label="Favorite">
-              <i class="fa-regular fa-heart icon"></i>
-            </button>
-        </div>
+    <a href="#categories" class="chip-link">
+      <i class="fa-solid fa-layer-group"></i>
+      دسته‌بندی‌ها
+    </a>
 
-        <div class="service-card card-elevation-1">
-            <img src="https://placehold.co/400x200?text=Social+Engineering" alt="تست مهندسی اجتماعی">
-            <h3>تست مهندسی اجتماعی (Social Engineering)</h3>
-            <p>
-                بررسی میزان آمادگی نیروی انسانی سازمان در برابر حملات فیشینگ، تماس‌های جعلی و دسترسی‌های غیرمجاز.
-            </p>
-            <a href="/pages/security-request.html" class="btn btn-filled btn-md">مشترک شوید</a>
+    <button class="chip-link" id="resetFiltersBtn" type="button">
+      <i class="fa-solid fa-rotate-left"></i>
+      پاک کردن فیلترها
+    </button>
+  </section>
 
-            <div class="rating">
-              <button class="star" data-star="1"><i class="fa-regular fa-star"></i></button>
-              <button class="star" data-star="2"><i class="fa-regular fa-star"></i></button>
-              <button class="star" data-star="3"><i class="fa-regular fa-star"></i></button>
-              <button class="star" data-star="4"><i class="fa-regular fa-star"></i></button>
-              <button class="star" data-star="5"><i class="fa-regular fa-star"></i></button>
-            </div>
+  <!-- دسته بندی‌ها -->
+  <section id="categories" class="categories card-elevation-1">
+    <h2 class="section-title">دسته‌بندی خدمات</h2>
+    <div class="category-grid">
+      <button class="category-card" data-cat="web">
+        <i class="fa-solid fa-globe"></i>
+        وب
+      </button>
+      <button class="category-card" data-cat="network">
+        <i class="fa-solid fa-network-wired"></i>
+        شبکه
+      </button>
+      <button class="category-card" data-cat="vuln">
+        <i class="fa-solid fa-shield-halved"></i>
+        آسیب‌پذیری
+      </button>
+      <button class="category-card" data-cat="social">
+        <i class="fa-solid fa-user-secret"></i>
+        مهندسی اجتماعی
+      </button>
+      <button class="category-card" data-cat="consulting">
+        <i class="fa-solid fa-comments"></i>
+        مشاوره
+      </button>
+    </div>
+  </section>
 
-            <button class="btn-icon" id="heart" aria-label="Favorite">
-              <i class="fa-regular fa-heart icon"></i>
-            </button>
-        </div>
+  <!-- لیست خدمات -->
+  <section class="services" id="servicesGrid">
 
-        <div class="service-card card-elevation-1">
-            <img src="https://placehold.co/400x200?text=Consulting" alt="مشاوره امنیتی">
-            <h3>مشاوره امنیتی و بهبود زیرساخت</h3>
-            <p>
-                ارائه مشاوره فنی برای طراحی یا بهبود زیرساخت‌های امنیتی سازمانی و استقرار سیاست‌های امنیتی مناسب.
-            </p>
-            <a href="/pages/security-request.html" class="btn btn-filled btn-md">مشترک شوید</a>
+    <!-- کارت 1 -->
+    <div class="service-card card-elevation-1"
+      data-name="Web Penetration Testing"
+      data-category="web"
+      data-rating="4.6"
+      data-featured="true">
 
-            <div class="rating">
-              <button class="star" data-star="1"><i class="fa-regular fa-star"></i></button>
-              <button class="star" data-star="2"><i class="fa-regular fa-star"></i></button>
-              <button class="star" data-star="3"><i class="fa-regular fa-star"></i></button>
-              <button class="star" data-star="4"><i class="fa-regular fa-star"></i></button>
-              <button class="star" data-star="5"><i class="fa-regular fa-star"></i></button>
-            </div>
-            
-            <button class="btn-icon" id="heart" aria-label="Favorite">
-              <i class="fa-regular fa-heart icon"></i>
-            </button>
-        </div>
-    </section>
+      <img src="https://placehold.co/400x200?text=Web+PenTest" alt="تست نفوذ وب">
+      <h3>تست نفوذ وب (Web Penetration Testing)</h3>
+      <p>
+        ارزیابی امنیت وب‌سایت شما با متدولوژی‌های OWASP و ارائه گزارش کامل آسیب‌پذیری‌ها.
+      </p>
 
+      <div class="card-actions">
+        <a href="/pages/security-request.html" class="btn btn-filled btn-md">مشترک شوید</a>
 
+        <button class="btn-icon heart-btn" aria-label="Favorite">
+          <i class="fa-regular fa-heart icon"></i>
+        </button>
+      </div>
 
-    <!-- دعوت به همکاری -->
-    <section class="cta">
-        <h2>به امنیت وب‌سایت خود اطمینان ندارید؟</h2>
-        <p>ما می‌توانیم قبل از مهاجمان، نقاط ضعف سیستم شما را شناسایی و ایمن کنیم.</p>
-        <a href="/pages/security-request.html" class="btn btn-filled btn-md">درخواست ارزیابی امنیتی</a>
-    </section>
-  </main>
+      <div class="rating">
+        <button class="star" data-star="1"><i class="fa-regular fa-star"></i></button>
+        <button class="star" data-star="2"><i class="fa-regular fa-star"></i></button>
+        <button class="star" data-star="3"><i class="fa-regular fa-star"></i></button>
+        <button class="star" data-star="4"><i class="fa-regular fa-star"></i></button>
+        <button class="star" data-star="5"><i class="fa-regular fa-star"></i></button>
+      </div>
+    </div>
+
+    <!-- کارت 2 -->
+    <div class="service-card card-elevation-1"
+      data-name="Network Assessment"
+      data-category="network"
+      data-rating="4.2"
+      data-featured="true">
+
+      <img src="https://placehold.co/400x200?text=Network+Assessment" alt="ارزیابی امنیت شبکه">
+      <h3>ارزیابی امنیت شبکه (Network Assessment)</h3>
+      <p>
+        تحلیل ساختار شبکه و شناسایی نقاط ضعف در تنظیمات سرورها، فایروال‌ها و سرویس‌ها.
+      </p>
+
+      <div class="card-actions">
+        <a href="/pages/security-request.html" class="btn btn-filled btn-md">مشترک شوید</a>
+
+        <button class="btn-icon heart-btn" aria-label="Favorite">
+          <i class="fa-regular fa-heart icon"></i>
+        </button>
+      </div>
+
+      <div class="rating">
+        <button class="star" data-star="1"><i class="fa-regular fa-star"></i></button>
+        <button class="star" data-star="2"><i class="fa-regular fa-star"></i></button>
+        <button class="star" data-star="3"><i class="fa-regular fa-star"></i></button>
+        <button class="star" data-star="4"><i class="fa-regular fa-star"></i></button>
+        <button class="star" data-star="5"><i class="fa-regular fa-star"></i></button>
+      </div>
+    </div>
+
+    <!-- کارت 3 -->
+    <div class="service-card card-elevation-1"
+      data-name="Vulnerability Scanning"
+      data-category="vuln"
+      data-rating="4.0"
+      data-featured="false">
+
+      <img src="https://placehold.co/400x200?text=Vulnerability+Scan" alt="اسکن آسیب‌پذیری">
+      <h3>اسکن آسیب‌پذیری‌ها (Vulnerability Scanning)</h3>
+      <p>
+        شناسایی تهدیدات امنیتی با ابزارهای تخصصی و ارائه راهکارهای اصلاحی دقیق.
+      </p>
+
+      <div class="card-actions">
+        <a href="/pages/security-request.html" class="btn btn-filled btn-md">مشترک شوید</a>
+
+        <button class="btn-icon heart-btn" aria-label="Favorite">
+          <i class="fa-regular fa-heart icon"></i>
+        </button>
+      </div>
+
+      <div class="rating">
+        <button class="star" data-star="1"><i class="fa-regular fa-star"></i></button>
+        <button class="star" data-star="2"><i class="fa-regular fa-star"></i></button>
+        <button class="star" data-star="3"><i class="fa-regular fa-star"></i></button>
+        <button class="star" data-star="4"><i class="fa-regular fa-star"></i></button>
+        <button class="star" data-star="5"><i class="fa-regular fa-star"></i></button>
+      </div>
+    </div>
+
+    <!-- کارت 4 -->
+    <div class="service-card card-elevation-1"
+      data-name="Social Engineering"
+      data-category="social"
+      data-rating="4.8"
+      data-featured="true">
+
+      <img src="https://placehold.co/400x200?text=Social+Engineering" alt="تست مهندسی اجتماعی">
+      <h3>تست مهندسی اجتماعی (Social Engineering)</h3>
+      <p>
+        بررسی آمادگی نیروی انسانی سازمان در برابر فیشینگ، تماس جعلی و دسترسی غیرمجاز.
+      </p>
+
+      <div class="card-actions">
+        <a href="/pages/security-request.html" class="btn btn-filled btn-md">مشترک شوید</a>
+
+        <button class="btn-icon heart-btn" aria-label="Favorite">
+          <i class="fa-regular fa-heart icon"></i>
+        </button>
+      </div>
+
+      <div class="rating">
+        <button class="star" data-star="1"><i class="fa-regular fa-star"></i></button>
+        <button class="star" data-star="2"><i class="fa-regular fa-star"></i></button>
+        <button class="star" data-star="3"><i class="fa-regular fa-star"></i></button>
+        <button class="star" data-star="4"><i class="fa-regular fa-star"></i></button>
+        <button class="star" data-star="5"><i class="fa-regular fa-star"></i></button>
+      </div>
+    </div>
+
+    <!-- کارت 5 -->
+    <div class="service-card card-elevation-1"
+      data-name="Security Consulting"
+      data-category="consulting"
+      data-rating="3.9"
+      data-featured="false">
+
+      <img src="https://placehold.co/400x200?text=Consulting" alt="مشاوره امنیتی">
+      <h3>مشاوره امنیتی و بهبود زیرساخت</h3>
+      <p>
+        ارائه مشاوره فنی برای طراحی یا بهبود زیرساخت‌های امنیتی و استقرار سیاست‌های مناسب.
+      </p>
+
+      <div class="card-actions">
+        <a href="/pages/security-request.html" class="btn btn-filled btn-md">مشترک شوید</a>
+
+        <button class="btn-icon heart-btn" aria-label="Favorite">
+          <i class="fa-regular fa-heart icon"></i>
+        </button>
+      </div>
+
+      <div class="rating">
+        <button class="star" data-star="1"><i class="fa-regular fa-star"></i></button>
+        <button class="star" data-star="2"><i class="fa-regular fa-star"></i></button>
+        <button class="star" data-star="3"><i class="fa-regular fa-star"></i></button>
+        <button class="star" data-star="4"><i class="fa-regular fa-star"></i></button>
+        <button class="star" data-star="5"><i class="fa-regular fa-star"></i></button>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- پرفروش‌ها -->
+  <section id="bestSelling" class="best-selling card-elevation-1">
+    <h2 class="section-title">پرفروش‌ها 🔥</h2>
+    <p class="section-subtitle">محبوب‌ترین خدمات بر اساس بیشترین درخواست کاربران</p>
+
+    <div class="best-selling-list">
+      <a class="best-item" href="#servicesGrid">Web Penetration Testing</a>
+      <a class="best-item" href="#servicesGrid">Social Engineering</a>
+      <a class="best-item" href="#servicesGrid">Network Assessment</a>
+    </div>
+  </section>
+
+  <!-- دعوت به همکاری -->
+  <section class="cta">
+    <h2>به امنیت وب‌سایت خود اطمینان ندارید؟</h2>
+    <p>ما می‌توانیم قبل از مهاجمان، نقاط ضعف سیستم شما را شناسایی و ایمن کنیم.</p>
+    <a href="/pages/security-request.html" class="btn btn-filled btn-md">درخواست ارزیابی امنیتی</a>
+  </section>
+</main>
+
 
     <div id="footer"></div>
 
@@ -143,5 +297,6 @@
     <script src="/js/heart.js"></script>
     <script src="/js/darkmode.js"></script>
     <script src="/js/rating.js"></script>
+    <script src="/js/services-filter.js"></script>
   </body>
 </html>
