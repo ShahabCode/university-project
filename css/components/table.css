@@ -13,11 +13,14 @@
   overflow-x: auto;
 }
 
+.container{
+  margin-top: 0;
+}
+
 /* TABLE */
 .md-table {
   width: 100%;
   border-collapse: collapse;
-  font-family: Roboto, sans-serif;
   color: var(--md-sys-color-on-surface);
   direction: rtl;
 }
@@ -51,4 +54,8 @@
 
 .md-table tbody tr:hover {
   background-color: var(--md-sys-color-surface-container-high);
+}
+
+.adminTitle{
+  margin-bottom: 45px;
 }
