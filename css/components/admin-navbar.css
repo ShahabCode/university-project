@@ -3,8 +3,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
+  margin-bottom: 0;
   background-color: var(--md-sys-color-primary);
+  position: fixed;
+  width: 100%;
 }
 
 .admin-nav ul {
