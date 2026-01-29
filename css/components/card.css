@@ -31,6 +31,7 @@
 
 .service-card {
   overflow: hidden;
+  cursor: pointer;
 }
 
 
