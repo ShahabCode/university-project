@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <title>جزئیات خدمت</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <div id="header"></div>
+
+  <main class="service-detail">
+
+    <!-- اطلاعات اصلی -->
+    <section class="service-hero card-elevation-1">
+        <h1 id="serviceTitle"></h1>
+        <div class="service-rating" id="serviceRating"></div>
+
+        <img id="serviceImage" src="" alt="">
+        <p id="serviceDescription"></p>
+        <a href="/pages/security-request.html" class="btn btn-filled btn-md">مشترک شوید</a>
+    </section>
+
+    <!-- نظرات -->
+    <section class="comments card-elevation-1">
+        <h2 class="section-title">نظرات کاربران</h2>
+
+        <form id="commentForm">
+          <input type="text" id="commentName" placeholder="نام شما" required>
+          <textarea id="commentText" placeholder="نظر شما" required></textarea>
+          <button class="btn btn-filled">ارسال نظر</button>
+        </form>
+
+        <div id="commentsList"></div>
+    </section>
+
+  </main>
+
+  <div id="footer"></div>
+
+  <button class="fab-btn" id="goTopBtn">⬆️</button>
+  <script src="/js/fab.js"></script>
+  <script src="/js/service-detail.js"></script>
+  <script src="/js/loadComponents.js"></script>
+  <script src="/js/hamburger.js"></script>
+  <script src="/js/darkmode.js"></script>
+</body>
+</html>
