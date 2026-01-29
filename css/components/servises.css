@@ -1,102 +1,321 @@
 /* صفحه اصلی */
 main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
 }
 
 /* عنوان صفحه */
 .page-header {
-    text-align: center;
-    margin-bottom: 3rem;
+  text-align: center;
+  margin-bottom: 2.2rem;
 }
 
 .page-header h1 {
-    font-size: 2.2rem;
-    margin-bottom: 0.5rem;
-    color: var(--md-sys-color-primary);
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--md-sys-color-primary);
 }
 
 .page-header p {
-    font-size: 1.1rem;
-    color: var(--md-sys-color-on-background);
+  font-size: 1.1rem;
+  color: var(--md-sys-color-on-background);
 }
 
-/* بخش کارت‌ها */
+/* ===== Toolbar (Search / Filter / Sort) ===== */
+.services-toolbar {
+  background: var(--md-sys-color-surface-container);
+  border-radius: var(--md-sys-shape-corner-large-default-size);
+  padding: 1rem;
+  margin-bottom: 1.2rem;
+
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 0.8fr 0.8fr 0.8fr;
+  gap: 0.8rem;
+  align-items: end;
+}
+
+.toolbar-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.toolbar-label {
+  font-size: 0.9rem;
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.services-toolbar select,
+.services-toolbar input {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--md-sys-color-outline);
+  border-radius: 14px;
+  background: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+  outline: none;
+}
+
+.services-toolbar select:focus,
+.services-toolbar input:focus {
+  border-color: var(--md-sys-color-primary);
+}
+
+/* Search box */
+.search-box {
+  position: relative;
+}
+
+.search-box i {
+  position: absolute;
+  left: 0.9rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--md-sys-color-on-surface-variant);
+  pointer-events: none;
+}
+
+.search-box input {
+  padding-left: 2.2rem;
+}
+
+/* checkbox */
+.toolbar-check {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.2rem 0.2rem;
+}
+
+.toolbar-check label {
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: 0.95rem;
+}
+
+.toolbar-check input {
+  width: 18px;
+  height: 18px;
+}
+
+/* ریسپانسیو Toolbar */
+@media (max-width: 992px) {
+  .services-toolbar {
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+  }
+}
+
+/* ===== Quick Links (chips) ===== */
+.quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.chip-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+
+  border: 1px solid var(--md-sys-color-outline);
+  background: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+  padding: 0.55rem 0.85rem;
+  border-radius: 999px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.chip-link:hover {
+  background: var(--md-sys-color-surface-container-high);
+}
+
+/* ===== Categories ===== */
+.categories {
+  background: var(--md-sys-color-surface-container);
+  border-radius: var(--md-sys-shape-corner-large-default-size);
+  padding: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+  color: var(--md-sys-color-primary);
+}
+
+.section-subtitle {
+  color: var(--md-sys-color-on-surface-variant);
+  margin-bottom: 1rem;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.8rem;
+}
+
+.category-card {
+  border: 1px solid var(--md-sys-color-outline);
+  background: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+  border-radius: 18px;
+  padding: 0.9rem;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.category-card:hover {
+  background: var(--md-sys-color-surface-container-high);
+}
+
+/* ===== Services grid ===== */
 .services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.2rem;
 }
 
-/* هر کارت */
+/* card */
 .service-card {
-    background-color: var(--md-sys-color-surface-container);
-    border-radius: var(--md-sys-shape-corner-large-default-size);
-    padding: 1.5rem;
-    position: relative; /* تا z-index اعمال شود */
-    z-index: 1; /* پایین‌تر از هدر */
-    box-shadow:
-        0px 2px 4px rgba(var(--md-sys-color-shadow-rgb), 0.14),
-        0px 4px 6px rgba(var(--md-sys-color-shadow-rgb), 0.12),
-        0px 1px 3px rgba(var(--md-sys-color-shadow-rgb), 0.20);    
-        transition: transform 0.3s, box-shadow 0.3s;
-    }
+  background-color: var(--md-sys-color-surface-container);
+  border-radius: var(--md-sys-shape-corner-large-default-size);
+  padding: 1.2rem;
 
-.service-card h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.7rem;
-    color: var(--md-sys-color-primary);
+  position: relative;
+  z-index: 1;
+
+  box-shadow:
+    0px 2px 4px rgba(var(--md-sys-color-shadow-rgb), 0.14),
+    0px 4px 6px rgba(var(--md-sys-color-shadow-rgb), 0.12),
+    0px 1px 3px rgba(var(--md-sys-color-shadow-rgb), 0.20);
+
+  transition: transform 0.25s ease, background-color 0.25s ease;
 }
 
-.service-card p {
-    font-size: 1rem;
-    color: var(--md-sys-color-on-surface-variant);
+.service-card:hover {
+  transform: translateY(-5px);
+  background-color: var(--md-sys-color-surface-container-high);
 }
 
 .service-card img {
-    width: 100%;
-    max-height: 180px;
-    object-fit: cover;
-    border-radius: var(--md-sys-shape-corner-large-default-size);
-    margin-bottom: 1rem;
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: var(--md-sys-shape-corner-large-default-size);
+  margin-bottom: 0.9rem;
 }
 
-
-/* افکت Hover */
-.service-card:hover {
-    transform: translateY(-5px);
-    box-shadow:
-        0px 2px 4px rgba(var(--md-sys-color-shadow-rgb), 0.14),
-        0px 4px 6px rgba(var(--md-sys-color-shadow-rgb), 0.12),
-        0px 1px 3px rgba(var(--md-sys-color-shadow-rgb), 0.20);
-        transition: transform 0.3s, box-shadow 0.3s;
-    background-color: var(--md-sys-color-surface-container-high);
+.service-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+  color: var(--md-sys-color-primary);
 }
 
+.service-card p {
+  font-size: 0.95rem;
+  color: var(--md-sys-color-on-surface-variant);
+  line-height: 1.8;
+  margin-bottom: 0.9rem;
+}
 
-/* بخش دعوت به همکاری */
+/* actions row */
+.card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.7rem;
+  margin-bottom: 0.8rem;
+}
+
+/* ===== Best Selling ===== */
+.best-selling {
+  margin-top: 2.2rem;
+  background: var(--md-sys-color-surface-container);
+  border-radius: var(--md-sys-shape-corner-large-default-size);
+  padding: 1.2rem;
+}
+
+.best-selling-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.8rem;
+}
+
+.best-item {
+  border: 1px solid var(--md-sys-color-outline);
+  background: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+  padding: 0.6rem 0.9rem;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+.best-item:hover {
+  background: var(--md-sys-color-surface-container-high);
+}
+
+/* CTA */
 .cta {
-    text-align: center;
-    margin-top: 4rem;
-    padding: 2rem;
-    background-color: var(--md-sys-color-surface-container-high); /* روشن و قابل خواندن */
-    color: var(--md-sys-color-on-surface); /* متن واضح */
-    border-radius: var(--md-sys-shape-corner-large-default-size);
-    box-shadow: 0 4px 12px rgba(var(--md-sys-color-shadow-rgb,0,0,0), 0.12);
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: var(--md-sys-color-surface-container-high);
+  color: var(--md-sys-color-on-surface);
+  border-radius: var(--md-sys-shape-corner-large-default-size);
+  box-shadow: 0 4px 12px rgba(var(--md-sys-color-shadow-rgb, 0, 0, 0), 0.12);
 }
 
 .cta h2 {
-    color: var(--md-sys-color-primary); /* تیتر برجسته */
+  color: var(--md-sys-color-primary);
 }
 
 .cta p {
-    color: var(--md-sys-color-on-surface-variant);
+  color: var(--md-sys-color-on-surface-variant);
 }
 
 .btn-filled {
-    background-color: var(--md-sys-color-primary); /* دکمه برجسته و تضاد قوی */
-    color: var(--md-sys-color-on-primary);
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
 }
 
+/* servise-details */
 
+.service-detail {
+  max-width: 900px;
+  margin: auto;
+}
+
+.service-hero img {
+  width: 100%;
+  border-radius: 18px;
+  margin: 1rem 0;
+}
+
+.service-rating {
+  color: gold;
+  margin-bottom: 0.6rem;
+}
+
+.comments form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.comments textarea {
+  min-height: 100px;
+}
+
+.comment-item {
+  border-bottom: 1px solid var(--md-sys-color-outline);
+  padding: 0.6rem 0;
+}
