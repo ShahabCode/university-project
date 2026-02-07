@@ -1,4 +1,21 @@
 /* ====================== TOPBAR ====================== */
+header {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  direction: ltr;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--md-sys-color-primary);
+  height: 78px;
+  color: var(--md-sys-color-on-primary);
+  border-radius: 0;
+  margin-top: 0;
+  margin-bottom: 40px;
+  z-index: 1000; /* مطمئن شوید بالاتر از کارت‌ها است */
+}
+
 .topbar {
   display: flex;
   align-items: center;

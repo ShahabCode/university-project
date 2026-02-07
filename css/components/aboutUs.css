@@ -1,0 +1,67 @@
+/* ========== About Us ========== */
+
+.aboutUs {
+    background-color: var(--md-sys-color-surface-container);
+    border-radius: var(--md-sys-shape-corner-extra-large-default-size);
+    padding: 2.5rem 2rem;
+    box-shadow:
+        0px 2px 4px rgba(var(--md-sys-color-shadow-rgb,0,0,0),0.12),
+        0px 4px 8px rgba(var(--md-sys-color-shadow-rgb,0,0,0),0.08);
+}
+
+/* تیترها */
+.aboutUs h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: var(--md-sys-color-primary);
+    text-align: center;
+}
+
+.aboutUs h2 {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--md-sys-color-primary-container);
+}
+
+/* متن‌ها */
+.aboutUs p {
+    font-size: 1.1rem;
+    color: var(--md-sys-color-on-surface-variant);
+    margin-bottom: 1rem;
+}
+
+/* لیست خدمات */
+.aboutUs ul {
+    list-style: disc inside;
+    margin-left: 0;
+    margin-bottom: 1rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.aboutUs ul li {
+    margin-bottom: 0.6rem;
+    font-size: 1.1rem;
+}
+
+/* =================why us================= */
+
+.why-us {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: var(--md-sys-color-surface-container-low);
+    border-radius: var(--md-sys-shape-corner-large-default-size);
+    margin-top: 40px;
+}
+
+.why-us h2 {
+    font-size: 2rem;
+    color: var(--md-sys-color-primary);
+    margin-bottom: 1rem;
+}
+
+.why-us p {
+    font-size: 1.1rem;
+    color: var(--md-sys-color-on-surface-variant);
+    margin-bottom: 0.5rem;
+}
