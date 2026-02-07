@@ -12,5 +12,4 @@ async function loadComponent(id, file) {
 window.addEventListener("DOMContentLoaded", () => {
   loadComponent("header", "/components/header.html");
   loadComponent("footer", "/components/footer.html");
-  loadComponent("rating", "/components/rating.html")
 });
